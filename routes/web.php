@@ -15,15 +15,5 @@ use App\Http\Controllers\EmployeeController;
 */
 
 
-Auth::routes();
-
-Route::middleware(['auth'])->group(function () {
-
-    Route::get('/', function () {
-        return view('welcome');
-    });
-    Route::resource('employees', 'App\Http\Controllers\EmployeeController');
-    Route::resource('companies', 'App\Http\Controllers\CompanyController');
-});
 
 
